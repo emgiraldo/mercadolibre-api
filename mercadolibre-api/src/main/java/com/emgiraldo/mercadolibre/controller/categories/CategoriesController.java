@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.emgiraldo.mercadolibre.controller.dto.Response;
-import com.emgiraldo.mercadolibre.service.categories.CountryCodes;
 import com.emgiraldo.mercadolibre.service.categories.ICategoriesService;
 import com.emgiraldo.mercadolibre.service.categories.dto.CategoryDTO;
+import com.emgiraldo.mercadolibre.service.categories.utils.CountryCodes;
 import com.emgiraldo.mercadolibre.service.exceptions.ServiceException;
 
 @Controller

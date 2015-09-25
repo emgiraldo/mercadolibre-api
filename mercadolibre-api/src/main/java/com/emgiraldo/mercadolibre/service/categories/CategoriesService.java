@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.emgiraldo.mercadolibre.service.categories.dto.CategoryDTO;
-import com.emgiraldo.mercadolibre.service.categories.dto.ResponseDTO;
 import com.emgiraldo.mercadolibre.service.categories.messages.MessagesEnum;
+import com.emgiraldo.mercadolibre.service.categories.utils.CountryCodes;
 import com.emgiraldo.mercadolibre.service.exceptions.ServiceException;
 import com.emgiraldo.mercadolibre.service.properties.PropertiesService;
 import com.emgiraldo.mercadolibre.service.rest.IRestServiceBase;
