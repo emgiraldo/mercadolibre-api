@@ -15,6 +15,7 @@ import com.emgiraldo.mercadolibre.controller.dto.Response;
 import com.emgiraldo.mercadolibre.service.categories.ICategoriesService;
 import com.emgiraldo.mercadolibre.service.categories.dto.CategoryDTO;
 import com.emgiraldo.mercadolibre.service.categories.utils.CountryCodes;
+import com.emgiraldo.mercadolibre.service.currency.ICurrencyService;
 import com.emgiraldo.mercadolibre.service.exceptions.ServiceException;
 
 @Controller
@@ -22,6 +23,8 @@ public class CategoriesController {
 	
 	@Autowired
 	private ICategoriesService categoryService;
+	@Autowired
+	private ICurrencyService currenctyService;
 	
 	private static final Logger logger = Logger.getLogger(CategoriesController.class);
 	
@@ -29,6 +32,8 @@ public class CategoriesController {
 	public @ResponseBody
 	Object getListOfCategoriesByCountryId(
 			@RequestParam(value = "countryId", required = true) String countryId){
+		
+		currenctyService.getCurrenctyDto(com.emgiraldo.mercadolibre.service.currency.util.CountryCodes.COLOMBIA);
 		
 		CountryCodes countryCode = null;
 		

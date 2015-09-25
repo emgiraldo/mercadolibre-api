@@ -16,6 +16,11 @@ public class PropertiesService {
 		return env.getProperty(CATEGORIES_URL);
 	}
 	
+	public String getMercadolibreCurrenciesUrl(){
+		return env.getProperty(CURRENCY_URL);
+	}
+	
 	final String CATEGORIES_URL = "mercadolibre.url.categories";
-
+	final String CURRENCY_URL = "mercadolibre.url.currencies";
 }
+
