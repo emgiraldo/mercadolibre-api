@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.emgiraldo.mercadolibre.service.categories.dto.CategoryDTO;
 import com.emgiraldo.mercadolibre.service.categories.messages.MessagesEnum;
-import com.emgiraldo.mercadolibre.service.categories.utils.CountryCodes;
+import com.emgiraldo.mercadolibre.service.categories.utils.CategoryCountryCodes;
 import com.emgiraldo.mercadolibre.service.exceptions.ServiceException;
 import com.emgiraldo.mercadolibre.service.properties.PropertiesService;
 import com.emgiraldo.mercadolibre.service.rest.IRestServiceBase;
@@ -28,11 +28,11 @@ public class CategoriesService implements ICategoriesService{
 	private PropertiesService propertiesService;
 	
 	public CategoriesService(){
-			restService = new RestServiceImpl<>(CategoryDTO[].class);
+			restService = new RestServiceImpl<>(CategoryDTO[].class, CategoryDTO.class);
 	}
 	
 	@Override
-	public List<CategoryDTO> getListOfCategoriesByCountryCode(CountryCodes countryCodes) throws ServiceException {
+	public List<CategoryDTO> getListOfCategoriesByCountryCode(CategoryCountryCodes countryCodes) throws ServiceException {
 		if(countryCodes == null){
 			logger.error("Error Code: " + MessagesEnum.ERROR_CATEGORIES_COUNTRY_ID.getCode() + ", Description: "
 					+ MessagesEnum.ERROR_CATEGORIES_COUNTRY_ID.getMessage());
