@@ -20,7 +20,12 @@ public class PropertiesService {
 		return env.getProperty(CURRENCY_URL);
 	}
 	
-	final String CATEGORIES_URL = "mercadolibre.url.categories";
-	final String CURRENCY_URL = "mercadolibre.url.currencies";
+	public String getMercadolibreListingTypesUrl(){
+		return env.getProperty(LISTING_TYPES_URL);
+	}
+	
+	private static final String CATEGORIES_URL = "mercadolibre.url.categories";
+	private static final String CURRENCY_URL = "mercadolibre.url.currencies";
+	private static final String LISTING_TYPES_URL = "mercadolibre.url.listingtypes"; 
 }
 

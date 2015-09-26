@@ -14,9 +14,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.emgiraldo.mercadolibre.controller.dto.Response;
 import com.emgiraldo.mercadolibre.service.categories.ICategoriesService;
 import com.emgiraldo.mercadolibre.service.categories.dto.CategoryDTO;
-import com.emgiraldo.mercadolibre.service.categories.utils.CountryCodes;
+import com.emgiraldo.mercadolibre.service.categories.utils.CategoryCountryCodes;
 import com.emgiraldo.mercadolibre.service.currency.ICurrencyService;
+import com.emgiraldo.mercadolibre.service.currency.dto.CurrencyDTO;
 import com.emgiraldo.mercadolibre.service.exceptions.ServiceException;
+import com.emgiraldo.mercadolibre.site.util.SiteCountryCodes;
 
 @Controller
 public class CategoriesController {
@@ -33,14 +35,14 @@ public class CategoriesController {
 	Object getListOfCategoriesByCountryId(
 			@RequestParam(value = "countryId", required = true) String countryId){
 		
-		currenctyService.getCurrenctyDto(com.emgiraldo.mercadolibre.service.currency.util.CountryCodes.COLOMBIA);
+		CurrencyDTO currency = currenctyService.getCurrencyByCountryId(SiteCountryCodes.COLOMBIA);
 		
-		CountryCodes countryCode = null;
+		CategoryCountryCodes countryCode = null;
 		
-		if(countryId.equals(CountryCodes.COLOMBIA.getCountryCode())){
-			countryCode = CountryCodes.COLOMBIA;
-		}else if(countryId.equals(CountryCodes.ARGENTINA.getCountryCode())){
-			countryCode = CountryCodes.ARGENTINA;
+		if(countryId.equals(CategoryCountryCodes.COLOMBIA.getCountryCode())){
+			countryCode = CategoryCountryCodes.COLOMBIA;
+		}else if(countryId.equals(CategoryCountryCodes.ARGENTINA.getCountryCode())){
+			countryCode = CategoryCountryCodes.ARGENTINA;
 		}
 		List<CategoryDTO> listOfCategories = new ArrayList<>();
 		try{
