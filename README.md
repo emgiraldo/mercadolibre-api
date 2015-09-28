@@ -9,7 +9,7 @@ This is basic example for interacting with Mercadolibre API. The project shows t
 - Maven Project: This project is based on a basic archetype for web app.
 - Bootstrap Front-End: It uses a basic Bootstrap definition for the UI. The connection to the backend is made in two different ways: (1) Calling project backend services for categories, listing types and list item, (2) Calling mercadolibre REST API Service directly for currencies. The associated dependencies are accessed by CDN.
 
-The project is still missing to complete the procedure for authorization and publishing an item.
+The project is still missing some functions to complete the procedure for authorization and publishing an item.
 
 # instructions
 1. Simple clone the project in your favorite IDE or directly to your filesystem
