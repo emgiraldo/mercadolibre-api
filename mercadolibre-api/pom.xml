@@ -77,6 +77,18 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.16</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.mercadolibre</groupId>
+			<artifactId>sdk</artifactId>
+			<version>0.0.2-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.9.2</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -94,5 +106,12 @@
 		</plugins>
 		<finalName>mercadolibre</finalName>
 	</build>
+
+	<repositories>
+		<repository>
+			<id>mercadolibre-snapshots</id>
+			<url>https://github.com/mercadolibre/java-sdk-repo/raw/master/snapshots</url>
+		</repository>
+	</repositories>
 
 </project>

@@ -24,8 +24,25 @@ public class PropertiesService {
 		return env.getProperty(LISTING_TYPES_URL);
 	}
 	
+	public String getMercadolibreCustomerId(){
+		return env.getProperty(CUTOMER_ID);
+	}
+	
+	public String getMercadolibreAppKey(){
+		return env.getProperty(APP_KEY);
+	}
+	
+	public String getMercadolibreAppCallback(){
+		return env.getProperty(APP_CALL_BACK_URL);
+	}
+	
 	private static final String CATEGORIES_URL = "mercadolibre.url.categories";
 	private static final String CURRENCY_URL = "mercadolibre.url.currencies";
 	private static final String LISTING_TYPES_URL = "mercadolibre.url.listingtypes"; 
+	
+	
+	private static final String CUTOMER_ID = "mercadolibre.customer.id";
+	private static final String APP_KEY = "mercadolibre.app.key";
+	private static final String APP_CALL_BACK_URL = "mercadolibre.app.callbackurl";
 }
 

@@ -17,4 +17,8 @@ public class CategoryDTO {
 	public void setName(String description) {
 		this.name = description;
 	}
+	@Override
+	public String toString() {
+		return "CategoryDTO [id=" + id + ", name=" + name + "]";
+	}
 }
