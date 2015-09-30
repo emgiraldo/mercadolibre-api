@@ -7,7 +7,7 @@ public class ItemServiceDTO {
 	private String title;
 	@JsonProperty("category_id")
 	private String category;
-	private double price;
+	private String price;
 	@JsonProperty("currency_id")
 	private String currencyId;
 	@JsonProperty("available_quantity")
@@ -31,10 +31,10 @@ public class ItemServiceDTO {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public double getPrice() {
+	public String getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 	public String getCurrencyId() {
